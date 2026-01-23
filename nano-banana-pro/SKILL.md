@@ -15,16 +15,40 @@ Generate and edit images using Google's Gemini 3 Pro model with advanced transpa
 
 ## Prerequisites
 
-Check for API key in `.env`:
-```python
-# Look for GOOGLE_API_KEY or GEMINI_API_KEY
+1. **Dependencies**: `google-genai`, `Pillow`, `numpy`
+   ```bash
+   pip install google-genai Pillow numpy
+   ```
+
+2. **API Key**: Check for `GOOGLE_API_KEY` or `GEMINI_API_KEY` in `.env`
+
+   If not found, ask user to set one:
+   ```
+   Get your API key from: https://aistudio.google.com/apikey
+   Add to .env: GOOGLE_API_KEY=your_key_here
+   ```
+
+## CLI Usage (Preferred)
+
+Use the `scripts/generate.py` CLI instead of writing Python code:
+
+```bash
+# Basic generation
+python scripts/generate.py "a cute banana sticker" -o banana.png
+
+# With transparency (for game assets, stickers, icons)
+python scripts/generate.py "pixel art sword" -o sword.png --transparent
+
+# Custom size and aspect ratio
+python scripts/generate.py "game logo" -o logo.png --size 4K --ratio 16:9
 ```
 
-If not found, ask user to set one:
-```
-Get your API key from: https://aistudio.google.com/apikey
-Add to .env: GOOGLE_API_KEY=your_key_here
-```
+**Options:**
+- `-o, --output` - Output filename (default: output.png)
+- `--transparent` - Extract true alpha channel using difference matting
+- `--size` - 1K, 2K, or 4K (default: 2K)
+- `--ratio` - Aspect ratio: 1:1, 16:9, 9:16, etc. (default: 1:1)
+- `--model` - Model override (default: gemini-3-pro-image-preview)
 
 ## Intent Detection
 
@@ -247,5 +271,6 @@ Default to **gemini-3-pro-image-preview** for most tasks.
 
 ## File References
 
+- `scripts/generate.py` - CLI for image generation (use this instead of writing code)
 - `scripts/transparency.py` - Difference matting implementation
 - `references/prompts.md` - Extended prompt examples by category
