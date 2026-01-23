@@ -15,9 +15,9 @@ Generate and edit images using Google's Gemini 3 Pro model with advanced transpa
 
 ## Prerequisites
 
-1. **Dependencies**: `google-genai`, `Pillow`, `numpy`
+1. **Dependencies**:
    ```bash
-   pip install google-genai Pillow numpy
+   pip install google-genai Pillow numpy python-dotenv
    ```
 
 2. **API Key**: The script loads from `.env` automatically. Only ask the user if the script fails with "No API key found".
