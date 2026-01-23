@@ -20,17 +20,13 @@ Generate and edit images using Google's Gemini 3 Pro model with advanced transpa
    pip install google-genai Pillow numpy
    ```
 
-2. **API Key**: Check for `GOOGLE_API_KEY` or `GEMINI_API_KEY` in `.env`
+2. **API Key**: The script loads from `.env` automatically. Only ask the user if the script fails with "No API key found".
 
-   If not found, ask user to set one:
-   ```
-   Get your API key from: https://aistudio.google.com/apikey
-   Add to .env: GOOGLE_API_KEY=your_key_here
-   ```
+## CLI Usage (REQUIRED)
 
-## CLI Usage (Preferred)
+**ALWAYS use the CLI script. Do NOT write Python code or create .py files.**
 
-Use the `scripts/generate.py` CLI instead of writing Python code:
+Run `scripts/generate.py` directly:
 
 ```bash
 # Basic generation
@@ -49,6 +45,8 @@ python scripts/generate.py "game logo" -o logo.png --size 4K --ratio 16:9
 - `--size` - 1K, 2K, or 4K (default: 2K)
 - `--ratio` - Aspect ratio: 1:1, 16:9, 9:16, etc. (default: 1:1)
 - `--model` - Model override (default: gemini-3-pro-image-preview)
+
+**Note:** The script loads the API key from `.env` automatically. Do not check for API keys manually or ask the user about them - just run the script and it will error with instructions if the key is missing.
 
 ## Intent Detection
 
