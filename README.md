@@ -17,6 +17,7 @@ Skills are structured instruction sets that give AI agents (like Claude Code and
 |-------|-------------|---------|
 | [interview](interview/) | In-depth interviewing to create detailed specs. Use when defining requirements, speccing out features, or articulating product details. Asks probing questions about technical implementation, UI/UX, concerns, and tradeoffs. | `npx skills add EnzeD/skills --skill interview` |
 | [nano-banana-pro](nano-banana-pro/) | Image generation and editing using Google Gemini's Nano Banana Pro model. Supports text-to-image, image editing, multi-turn conversations, and transparency extraction via difference matting. | `npx skills add EnzeD/skills --skill nano-banana-pro` |
+| [spec-reviewer](spec-reviewer/) | Review and challenge spec documents against your project's codebase, best practices, and guidelines. Spawns a team of parallel agents to analyze consistency, code reuse, performance, scope, and testability. | `npx skills add EnzeD/skills --skill spec-reviewer` |
 
 ## Installation
 
