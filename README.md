@@ -19,6 +19,7 @@ Skills are structured instruction sets that give AI agents (like Claude Code and
 | [nano-banana-pro](nano-banana-pro/) | Image generation and editing using Google Gemini's Nano Banana Pro model. Supports text-to-image, image editing, multi-turn conversations, and transparency extraction via difference matting. | `npx skills add EnzeD/skills --skill nano-banana-pro` |
 | [nano-banana-2](nano-banana-2/) | Image generation and editing using Google Gemini's Nano Banana 2 (gemini-3.1-flash-image-preview) model. Supports text-to-image, image editing, multi-turn conversations, and transparency extraction via difference matting. | `npx skills add EnzeD/skills --skill nano-banana-2` |
 | [spec-reviewer](spec-reviewer/) | Review and challenge spec documents against your project's codebase, best practices, and guidelines. Spawns a team of parallel agents to analyze consistency, code reuse, performance, scope, and testability. | `npx skills add EnzeD/skills --skill spec-reviewer` |
+| [yeet](yeet/) | Independent code review, fixes, commit, push, PR, CI follow-through, and automatic merge. Requires GitHub CLI and subagent support. | `npx skills add EnzeD/skills --skill yeet` |
 
 ## Installation
 
@@ -65,4 +66,4 @@ Contributions are welcome! When editing a skill:
 
 ## License
 
-MIT License - feel free to use these skills in your projects.
+MIT License unless a skill specifies otherwise. The adapted [yeet](yeet/) skill retains its [Apache-2.0 license](yeet/LICENSE.txt).
